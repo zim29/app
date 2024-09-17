@@ -1,0 +1,214 @@
+.circle-shadow {
+  filter: drop-shadow(1px 1px 200px rgba(4, 0, 89, .5));
+}
+
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 0, 255, 0.05);
+  /* Blue overlay with transparency */
+}
+
+.hero::before {
+  background-image: url('../img/hero_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  /* filter: hue-rotate(200deg) brightness(0.7); */
+  /* Blue tint effect */
+  z-index: -1;
+  /* Ensure it stays in the background */
+}
+
+.extesion-shop {
+  background-image: url('../img/extesion-shop-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.extesion-shop .btn {
+  width: 250px !important;
+  color: rgb(var(--red-color));
+}
+
+@media screen and (min-width: 800px) {
+
+  .get-started {
+    width: 67vw;
+    position: relative;
+    top: -12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+  }
+
+  .get-started img {
+    max-width: 18rem;
+  }
+
+  .why-us {
+    height: 160vh !important;
+  }
+
+  .why-us .container {
+    width: 64vw;
+  }
+
+  .extesion-shop {
+    margin-top: 1rem;
+    height: 20rem;
+  }
+
+  .extesion-shop>.container {
+    width: 45vw;
+  }
+
+  .top-extentions {
+    margin-top: 5rem;
+  }
+
+  .top-extentions>.container>.main-text {
+    width: 45vw;
+  }
+
+  .expertise-summary {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8vh;
+  }
+
+  .card {
+    width: 20rem;
+  }
+
+  .icon-phone {
+    font-size: 16px;
+    margin-left: .5rem;
+  }
+
+  .circle-shadow:after {
+
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    /* Adjust this to move the circle further down */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    /* Adjust the circle size */
+    height: 800px;
+    background-color: rgba(240, 255, 255, 0.8);
+    /* Circle color */
+    border-radius: 50%;
+    z-index: -1 !important;
+    /* Ensure the circle is behind the icon */
+    filter: blur(1000px);
+    /* Apply the blur effect */
+  }
+
+  .z-index-fix {
+    z-index: 1000 !important;
+  }
+
+  .hero {
+    padding-top: 10rem;
+    height: calc(120vh + 8rem);
+  }
+
+  .hero h1 {
+    line-height: 1.1;
+  }
+
+  .hero .specs {
+    margin-top: 2.4rem;
+  }
+
+  .col-md-5-custom {
+    width: 43% !important;
+  }
+
+  .col-md-7-custom {
+    width: 57% !important;
+  }
+
+  .lead {
+    margin-bottom: .4rem;
+  }
+
+  .opencart-cellphone-image {
+    width: 50vw;
+    position: relative;
+    left: -5rem;
+    top: -5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    margin-top: 8rem;
+  }
+
+  .opencart-cellphone-image {
+    width: 100vw;
+  }
+
+  .expertise-summary {
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.lead {
+  font-size: 12px;
+}
+
+.compressed-text {
+  /* transform: scaleY(0.85) ; */
+  display: inline-block;
+}
+
+.expertise-summary i {
+  font-size: 4rem;
+  font-style: normal;
+}
+
+.expertise-summary p {
+  font-size: 18px;
+  font-style: normal;
+}
+
+.why-us {
+  background-image: url('../img/why-us-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.why-us .img-fluid {
+  max-width: 100px; 
+  height: 100px;
+}
+
+.why-us h4 {
+  min-height: 60px; /* Ajusta este valor según la altura del contenido más largo */
+}
+
+.get-started {
+  background-color: rgb(var(--red-color));
+}

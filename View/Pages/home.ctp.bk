@@ -1,0 +1,335 @@
+<?php echo $this->Html->css(
+    array('/libraries/owl-carousel/owl.carousel.min',
+        '/libraries/owl-carousel/owl.theme.default.min',
+        'pages/home.css'
+    )
+);
+?>
+
+<?php echo $this->Html->script(
+    array('/libraries/owl-carousel/owl.carousel.min',
+        'pages/home/general.js?v=110'
+    )
+);
+?>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            'items' : 1,
+            'dots' : 1,
+        });
+    });
+</script>
+<main id="home">
+	<?php
+
+		$black_friday_offer = !empty($black_friday) && empty($black_friday['block_banners_bf']);
+	?>
+	<?php if (!$black_friday_offer) { ?>
+    <header class="jumbotron bg-primary gradient-background">
+        <div class="container">
+            <div class="row">
+                <center class="col-md-8 offset-md-2">
+                    <h1 class="animated zoomIn"><?= __('Solid e-commerce solutions since 2009')?></h1>
+                    <p class="lead lead-home-fr animated bounceInUp">
+                        <a class="btn btn-lg btn-outline-primary" href="#wy_chose_us">Grow with us!<br><small><b><?= $clients_total_num ?></b> businesses already did it!</small></a>
+                    </p>
+                </center>
+            </div>
+        </div>
+    </header>
+	<?php } ?>
+	<?php if ($black_friday_offer) {
+        $offer_text = !empty($black_friday['cibermonday']) ? 'Ciber Monday' : 'Black Friday';
+        ?>
+		<style>
+			header.black_friday {
+				text-align: left !important;
+			}
+			header.black_friday div.black_friday_text h1 {
+				font-size: 42px !important;
+				margin-bottom: 20px !important;
+			}
+			header.black_friday div.black_friday_text p {
+				margin-bottom: 0px;
+			}
+			#home>header.black_friday div.black_friday_text a.btn {
+				color: #fff;
+				float: left;
+				display: block;
+				width: auto;
+				padding: 10px 37px !important;
+				background: #ff0d4d !important;
+				margin-top: 15px;
+			}
+			#home>header.black_friday div.black_friday_text a.btn:hover {
+				background: #fff !important;
+				color: #ff0d4d !important;
+			}
+			#home>header.black_friday {
+				padding-top: 60px !important;
+				padding-bottom: 9px !important;
+			}
+		</style>
+		<header class="jumbotron bg-primary gradient-background black_friday">
+			<div class="container">
+				<div class="row">
+					<div class="black_friday_text col-md-6">
+						<h1>Unlock <?= $offer_text ?> Deals on Our Premium OpenCart Extensions!</h1>
+						<p>Make your online store better with our tools!</p>
+						<p>This <?= $offer_text ?>, we’re giving you a huge <?= $black_friday['discount'] ?>% discount on all our OpenCart extensions.</p>
+						<p>Boost your sales and improve your website at a great price!</p>
+						<a href="https://devmanextensions.com/black-friday" class="btn btn-primary text-uppercase animated pulse">I want it!</a>
+					</div>
+					<div class="image col-md-6">
+						<?= $this->Html->image('/v2/images/home/black_friday_offers.png', [
+								'class' => 'img-fluid',
+						]) ?>
+
+					</div>
+				</div>
+
+			</div>
+		</header>
+
+		<section id="black_friday">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 style="margin-bottom: 16px;">Discover Our <?= $offer_text ?> Specials: OpenCart's Extensions and Services on Sale!</h2>
+						<p>Upgrade your OpenCart store this <?= $offer_text ?> with our fantastic discounts on selected extensions and services. From improving site functionality to providing expert guidance, our solutions are now available at irresistible prices. Browse through and grab the deals to enhance your e-commerce performance!</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<a href="https://devmanextensions.com/black-friday">
+						<?= $this->Html->image('/v2/images/home/black_friday_extensions.jpg', [
+								'class' => 'img-fluid',
+								'alt' => 'Vibrant graphic showcasing Black Friday themed icons related to OpenCart extensions, with a shopping cart filled with purple bags and a mobile phone displaying a logo on the side.'
+						]) ?>
+
+						<h3>Opencart Extensions</h3></a>
+					</div>
+					<div class="col-md-6">
+						<a href="https://devmanextensions.com/services">
+							<?= $this->Html->image('/v2/images/home/black_friday_services.jpg', [
+									'class' => 'img-fluid',
+									'alt' => "Bold graphic featuring labels such as 'Custom programming' and 'Full project development' against a deep purple background, highlighting OpenCart Services with a standout 'Black Friday Sale' tag."
+							]) ?>
+
+						<h3>Opencart's Custom Services</h3></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<?php } ?>
+    <div id="wy_chose_us"></div>
+    <section id="reasons">
+        <div class="container">
+            <h2 class="animated pulse"><?= __('Why choose uss?') ?></h2>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 offset-md-1">
+                    <h3><?= __('OpenCart Partner') ?></h3>
+                    <p><?= __('We are an official OpenCart Partner since 2012, offering top quality and support.') ?></p>
+                </div>
+                <div class="col-sm-6 col-md-4 offset-md-2">
+                    <h3><?= __('Fast support') ?></h3>
+                    <p><?= __('We reply to most inquiries within 24 working hours.') ?></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 offset-md-1">
+                    <h3><?= __('Satisfaction guaranteed or your money back!') ?></h3>
+                    <p><?= __('If, for any reason, you are not completely satisfied with our products, we will refund you promptly, no question asked!') ?></p>
+                </div>
+                <div class="col-sm-6 col-md-4 offset-md-2">
+                    <h3><?= __('Count on us!') ?></h3>
+                    <p><?= __('We love what we do and we will stand behind you ready to answer any questions you may have along the way!') ?></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 offset-md-1">
+                    <h3><?= __('Special requirements?') ?></h3>
+                    <p><?= __('Tell us more about your project and our development team will be happy to get back to you with an estimate.') ?></p>
+                </div>
+                <div class="col-sm-6 col-md-4 offset-md-2">
+                    <h3><?= __('We are expert in...') ?></h3>
+                    <p><b>E-commerce/CMS:</b> OpenCart, CS-Cart, Prestashop, Woocommerce, Wordpress.<br><b>Frameworks:</b> Angular, Vue.js, Ionic, jQuery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="ceo" class="bg-light ceo_container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 ceo_image">
+                    <?= $this->Html->image('/v2/images/employers/david_nieves_coronado_ceo_big_photo.png', [
+                        'class' => 'img-fluid ceo_image_body',
+                    ]) ?>
+                </div>
+                <div class="col-sm-6 ceo_testimony">
+                    <blockquote class="blockquote text-left">
+                        <p>Our job is our passion! We strive to make each product and project we get involved the best we possibly can. That spirit is what had put Devman among the best e-commerce consulting companies.</p>
+                        <p>We know how important is your online presence to you, so we take it seriously. Let us take care of all the technical hassles so you can fully focus on what really matters: your business!</p>
+                        <footer class="blockquote-footer">
+                            David Nieves Coronado<br>
+                            Devman CEO
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team" class="bg-primary">
+        <div class="container">
+            <h2 class="animated pulse">Devman Team</h2>
+            <div class="row devman_team">
+                <div class="col-sm-6 col-md-4 member david">
+                    <?= $this->Html->image('/v2/images/employers/david_nieves_coronado_ceo.jpg', array('class' => 'img-fluid')) ?>
+                    <h3>David Nieves Coronado</h3>
+                    <p>
+                        <strong><?= __('CEO') ?></strong><br>
+                        ENG SPA
+                    </p>
+                </div>
+				<div class="col-sm-6 col-md-4 member dairon">
+					<?= $this->Html->image('/v2/images/employers/dairon_ian_developer.jpg', array('class' => 'img-fluid')) ?>
+					<h3>Dairon Ian García Roque</h3>
+					<p>
+						<strong><?= __('Developer') ?></strong><br>
+						ENG SPA
+					</p>
+				</div>
+                <div class="col-sm-6 col-md-4 member andres">
+                    <?= $this->Html->image('/v2/images/employers/andres_javier_pavon_web_developer.jpg', array('class' => 'img-fluid')) ?>
+                    <h3>Andrés Javier Pavón Fernández</h3>
+                    <p>
+                        <strong><?= __('Developer') ?></strong><br>
+                        ENG SPA
+                    </p>
+                </div>
+                <?php /*<div class="col-sm-6 col-md-4 member daniel">
+                    <?= $this->Html->image('/v2/images/employers/daniel_alejandro_rodriguez_caballero_developer.jpg', array('class' => 'img-fluid')) ?>
+                    <h3>Daniel Alejandro Rodríguez Caballero</h3>
+                    <p>
+                        <strong><?= __('Developer / Support team') ?></strong><br>
+                        ENG SPA
+                    </p>
+                </div>*/ ?>
+
+				<div class="col-sm-6 col-md-4 member dariel">
+					<?= $this->Html->image('/v2/images/employers/dariel_vicedo_developer.jpg', array('class' => 'img-fluid')) ?>
+					<h3>Dariel Vicedo</h3>
+					<p>
+						<strong><?= __('Developer / Support team') ?></strong><br>
+						ENG SPA ITA
+					</p>
+				</div>
+                <?php /*<div class="col-sm-6 col-md-4 member carlos">
+                    <?= $this->Html->image('/v2/images/employers/carlos_cesar_caballer_developer.jpg', array('class' => 'img-fluid')) ?>
+                    <h3>Carlos César Caballero</h3>
+                    <p>
+                        <strong><?= __('Developer') ?></strong><br>
+                        ENG SPA
+                    </p>
+                </div> */ ?>
+
+                <?php /*<div class="col-sm-6 col-md-4 member gabriel">
+                    <?= $this->Html->image('/v2/images/employers/gabriel_lopez_lopez_developer.jpg', array('class' => 'img-fluid')) ?>
+                    <h3>Gabriel López López</h3>
+                    <p>
+                        <strong><?= __('Developer') ?></strong><br>
+                        ENG SPA
+                    </p>
+                </div>*/ ?>
+
+                <div class="col-sm-6 col-md-4 member denis">
+                    <?= $this->Html->image('/v2/images/employers/denis_russia_support_team.jpg', array('class' => 'img-fluid')) ?>
+                    <h3>Денис Перелыгин (Denis Perelygin)</h3>
+                    <p>
+                        <strong><?= __('Russia support team') ?></strong><br>
+                        RUS ENG
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-4 member marlon">
+                    <?= $this->Html->image('/v2/images/employers/marlon_umania_marketing_specialist.jpg', array('class' => 'img-fluid')) ?>
+                    <h3>Marlon Umaña</h3>
+                    <p>
+                        <strong><?= __('SEO/SEM Specialist') ?></strong><br>
+                        ENG SPA
+                    </p>
+                </div>
+
+                <?php /*<div class="col-sm-6 col-md-4 member lian">
+                    <?= $this->Html->image('/v2/images/employers/lian_castellon_gazapo_developer_support_team.jpg', array('class' => 'img-fluid')) ?>
+                    <h3>Lian Castellón Gazapo</h3>
+                    <p>
+                        <strong><?= __('Developer') ?></strong><br>
+                        ENG SPA
+                    </p>
+                </div> */ ?>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="animated pulse"><?= __('What our customers say about us') ?></h2>
+                    <?php
+                    $item = array(
+                        'name' => __('Know the '.$testimonials_count.' testimonials here'),
+                        'params' => array(
+                        'plugin' => false,
+                            'controller' => 'pages',
+                            'action' => 'display',
+                            'testimonials'
+                        ),
+                        'extra_params' => array(
+                            'class' => '',
+                        )
+                    );
+                    $testimonial_link = $this->Html->link($item['name'], $item['params'], $item['extra_params']);
+                    ?>
+                    <div class="owl-carousel owl-theme">
+                        <?php foreach ($testimonials as $testimonial): ?>
+                            <div class="testimony row">
+                                <div class="image col-md-3">
+                                     <?= $this->Html->image('/images/testimonials/' . $testimonial['Testimonial']['image'], ['class' => 'img-fluid']); ?>
+                                </div>
+                                <div class="text col-md-9">
+                                    <h5>
+                                        <?= $testimonial['Testimonial']['name'] ?><br>
+                                        <?= $testimonial['Testimonial']['position'] ?><br/>
+                                        <a class="website" target="_blank" href="<?= $testimonial['Testimonial']['url'] ?>"><?= $testimonial['Testimonial']['url'] ?></a>
+                                    </h5>
+                                    <p><?= $testimonial['Testimonial']['testimonial'] ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <?= $testimonial_link; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2 class="animated pulse"><?= __('Services') ?></h2>
+                    <p>
+                        <?= __('Our excellent dev team will turn your ideas into reality. We make full projects, development over your platforms, custom modules/plugins for them, SEO/SEM services or marketing strategys for boost your sales!') ?>
+                    </p>
+                    <p>
+                        <?= $this->Html->link(__('Tell me more!'), '/services', ['class' => 'btn btn-primary text-uppercase animated pulse']) ?>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

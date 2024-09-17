@@ -1,0 +1,9 @@
+img.tag_icon {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    margin-top: -6px;
+}
+img.tag_icon.go{
+    width: 32px;
+}

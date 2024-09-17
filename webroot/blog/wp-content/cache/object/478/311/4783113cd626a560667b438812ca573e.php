@@ -1,0 +1,5 @@
+aéÑf<?php exit; ?>a:1:{s:7:"content";O:8:"stdClass":9:{s:7:"term_id";s:2:"14";s:4:"name";s:25:"Common Errors in Opencart";s:4:"slug";s:13:"common-errors";s:10:"term_group";s:1:"0";s:16:"term_taxonomy_id";s:2:"14";s:8:"taxonomy";s:8:"category";s:11:"description";s:831:"Over the years, we have seen many common errors among the Opencart's user community. We know that sometimes these can be frustrating for online store owners. Often, these errors can prevent their page from functioning correctly, which can result in lost sales and customers.
+
+That is why we have decided to share with you, our community, some of our experiences and prevent you from encountering the same difficulties we have encountered over the years. We will be sharing solutions to errors in Opencart, which we find interesting. Additionally, we bring you several very useful tips.
+
+If you need help solving a particular problem or if you have any questions, do not hesitate to<a href="https://devmanextensions.com/open_ticket"> contact us</a>. We are here to help you and ensure that your online store is running smoothly.";s:6:"parent";s:1:"7";s:5:"count";s:1:"5";}}

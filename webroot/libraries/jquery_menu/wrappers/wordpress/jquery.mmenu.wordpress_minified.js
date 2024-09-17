@@ -1,0 +1,1 @@
+!function(e){var s="mmenu";e[s].configuration.classNames.selected="current-menu-item",e("#wpadminbar").css("position","fixed").addClass("mm-slideout")}(jQuery)

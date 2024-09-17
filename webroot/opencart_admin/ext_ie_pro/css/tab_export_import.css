@@ -1,0 +1,54 @@
+div.remodal.export_import_remodal_process div.remodal_content {
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+div.container_launch_profile {
+    background: url(../img/launch_profile_background.png) no-repeat right -140px;
+    padding-top: 25px;
+    margin-top: -25px;
+    margin-bottom: 45px;
+}
+div.container_launch_profile div.form-group {
+    padding: 0px;
+    padding-bottom: 19px;
+    border-top: none !important;
+}
+div.container_launch_profile div.container_profile_selector {
+    padding-top: 70px;
+}
+div.container_launch_profile div.container_input_export_from {
+    padding-left: 0px;
+}
+div.container_launch_profile div.container_input_export_to {
+    padding-right: 0px;
+}
+div.container_launch_profile>div.row {
+    border-bottom: 1px solid #dddddd;
+    min-height: 325px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+div.container_launch_profile label {
+    margin-bottom: 10px;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+div.container_launch_profile div.launch_profile a:hover span {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+div.container_create_profile {
+    padding-bottom: 45px;
+}

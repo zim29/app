@@ -1,0 +1,1 @@
+!function(e){var l="mmenu";e[l].defaults.onClick.close=!0,e[l].defaults.onClick.preventDefault=!1,e[l].defaults.onClick.setSelected=!0}(jQuery)

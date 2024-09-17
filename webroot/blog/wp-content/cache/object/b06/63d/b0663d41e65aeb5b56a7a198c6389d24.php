@@ -1,0 +1,1 @@
+òîÑf<?php exit; ?>a:1:{s:7:"content";a:2:{s:7:"version";s:6:"4.6.16";s:8:"patterns";a:0:{}}}

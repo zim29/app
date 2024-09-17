@@ -1,0 +1,149 @@
+.inner_section {
+    padding: 25px 25px 8px 25px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0px 5px 5px 2px #eee;
+    margin-top: -15px;
+    z-index: 999;
+}
+.inner_section legend {
+    background: #f45223;
+    text-shadow: none;
+}
+
+legend.with_button {
+    line-height: 48px;
+}
+legend.with_button a.button,
+legend.with_button a.button_oc{
+    margin-left: 10px;
+    margin-right: 15px;
+    line-height: 18px;
+    height: 35px;
+    text-shadow: none;
+    top: -1px;
+}
+legend.with_button a.button .fa:last-child,
+legend.with_button a.button_oc .fa:last-child{
+    margin-right: 0px;
+}
+legend.with_button {
+    text-indent: 0px;
+}
+div.ajax_loading div.panel_loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    min-width: 400px;
+    max-width: 650px;
+    min-height: 300px;
+    border: 3px solid #f45223;
+}
+div.ajax_loading div.panel_loading span.title i {
+    margin-right: 10px;
+    color: #f45223;
+}
+div.ajax_loading div.panel_loading span.title {
+    font-weight: bold;
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: left;
+    color: #f45223;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+div.ajax_loading div.alert {
+    margin-top: 10px;
+}
+div.ajax_loading div.panel_loading i.fa.fa-exclamation-circle,
+div.ajax_loading div.panel_loading i.fa.fa-check-circle{
+    margin-right: 8px;
+}
+div.ajax_loading div.panel_loading i.fa.fa-exclamation-circle
+{
+    color: #f56b6b;
+}
+div.ajax_loading div.panel_loading i.fa.fa-check-circle {
+    color: #8fbb6c;
+}
+div.ajax_loading div.panel_loading div.content {
+    max-height: 400px;
+    height: 400px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    /*padding-left: 20px;*/
+    padding-right: 20px;
+}
+
+div.ajax_loading div.panel_loading div.content div.alert.alert-danger,
+div.ajax_loading div.panel_loading div.content div.alert.alert-success{
+    text-align: left;
+}
+
+div.ajax_loading div.panel_loading div.container_button_close
+{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+div.ajax_loading div.panel_loading a.button.close_button,
+div.ajax_loading div.panel_loading a.button_oc.close_button{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+div.ajax_loading div.panel_loading a.button.close_button:before,
+div.ajax_loading div.panel_loading a.button_oc.close_button:before{
+    margin-right: 10px;
+    content: "\f00d";
+    font-family: "FontAwesome";
+}
+
+div.google_spreadsheet_logo{
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-horizontal .form-group.type_radio .control-label,
+.form-horizontal .form-group.type_boolean .control-label{
+    padding-top: 0px;
+}
+
+input[type="checkbox"].ios-switch + div {
+    margin-top: 0px;
+}
+
+div.model_filter,
+div.export_filters.delete_filter input[type="text"],
+div.export_filters_extra{
+    display: none;
+}
+div.export_filters.deleted {
+    display: none !important;
+}
+div.export_filters.delete_filter {
+    text-align: right;
+}
+span.select_template_success{
+    color: #8fbb6c;
+    display: none;
+    margin-left: 10px;
+}
+ul.nav.nav-tabs li a span.retina-business-0390:before {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}

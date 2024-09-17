@@ -1,0 +1,104 @@
+ul.nav.nav-tabs li.active > a {
+    color: #fff !important;
+    background: #0db7ef !important;
+    padding: 11px 8px;
+    height: 52px;
+}
+ul.nav.nav-tabs li > a {
+    padding: 10px 8px;
+    margin-right: 8px;
+}
+ul.nav.nav-tabs li > a.tab_no_text {
+    height: 40px;
+}
+ul.nav.nav-tabs li > a.tab_no_text > i,
+ul.nav.nav-tabs li > a.tab_no_text > span {
+    margin-right: 0px !important;
+}
+
+ul.nav.nav-tabs li > a > span {
+    font-size: 20px;
+    margin-right: 7px;
+    display: block;
+    float: left;
+    margin-top: -1px;
+}
+ul.nav.nav-tabs li > a > i {
+    margin-right: 7px;
+}
+ul.nav.nav-tabs li:not(.active) > a {
+    border: 1px solid #ededed;
+}
+ul.nav.nav-tabs li:not(.active) {
+    padding-bottom: 12px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background: none !important;
+    border: none !important;
+    font-weight: normal !important;
+}
+span.main_title {
+    font-size: 38px;
+    font-weight: 300;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 39px;
+    line-height: 35px;
+}
+span.main_title>span[class^="retina-"] {
+    margin-right: 18px;
+    font-weight: normal;
+}
+div.panel-body .button.clear_style,
+div.panel-body .button_oc.clear_style,
+div.panel-body .button-oc.clear_style {
+    box-shadow: none;
+    padding: 0px;
+    font-size: 18px;
+    height: 60px;
+    padding: 0px 30px;
+    line-height: 60px;
+}
+div.panel-body .button.clear_style span[class^="retina-"],
+div.panel-body .button_oc.clear_style span[class^="retina-"],
+div.panel-body .button-oc.clear_style span[class^="retina-"] {
+    font-size: 40px;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+}
+div.panel-body .button.clear_style.icon_right,
+div.panel-body .button_oc.clear_style.icon_right,
+div.panel-body .button-oc.clear_style.icon_right {
+    padding-right: 10px;
+}
+div.panel-body .button.clear_style.icon_left,
+div.panel-body .button_oc.clear_style.icon_left,
+div.panel-body .button-oc.clear_style.icon_left {
+    padding-left: 10px;
+}
+
+div.panel-body .button.clear_style.icon_right span[class^="retina-"],
+div.panel-body .button_oc.clear_style.icon_right span[class^="retina-"],
+div.panel-body .button-oc.clear_style.icon_right span[class^="retina-"] {
+    margin-left: 20px;
+    float: right;
+}
+div.panel-body .button.clear_style.icon_left span[class^="retina-"],
+div.panel-body .button_oc.clear_style.icon_left span[class^="retina-"],
+div.panel-body .button-oc.clear_style.icon_left span[class^="retina-"] {
+    margin-right: 20px;
+    float: left;
+}
+div.panel-body .button.clear_style:active {
+    transform: none !important;
+}
+
+div.panel-body .button.clear_style.success {
+    background: #00b774;
+}
+div.panel-body .button.clear_style.success:hover {
+    background: #03af70;
+}

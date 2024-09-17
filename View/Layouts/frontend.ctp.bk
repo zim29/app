@@ -1,0 +1,539 @@
+<?php
+$is_home = isset($this->params['pass'][0]) && $this->params['pass'][0] == "home";
+
+$active_link = !empty($force_active_menu_item) ? $force_active_menu_item : (isset($this->params['pass'][0]) && is_string($this->params['pass'][0]) ? $this->params['pass'][0] : '');
+
+if(!empty($this->params['plugin']) && $this->params['plugin'] == 'accounts')
+	$active_link = 'my_account';
+
+$menu_items = [
+       /*'home' => [
+        'name' => __('Home'),
+        'params' =>[
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+                'home'
+            ],
+        'extra_params' => [
+            'class' => 'nav-link',
+        ]
+    ],*/
+    'shop' => [
+        'name' => !empty($black_friday['button_title']) ? $black_friday['button_title'] : (!empty($black_friday) ? __('BlackFriday Products') : __('Products')),
+        'params' =>[
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+				!empty($black_friday['page']) ? $black_friday['page'] : (!empty($black_friday) ? 'black-friday' : 'extensions-shop')
+            ],
+        'extra_params' => [
+            'class' => 'nav-link',
+        ]
+    ],
+    'services' => [
+        'name' => __('Services'),
+        'params' =>[
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+                'services'
+            ],
+        'extra_params' => [
+            'class' => 'nav-link',
+        ]
+    ],
+	'marketing' => [
+			'name' => __('Marketing'),
+			'params' =>[
+					'plugin' => false,
+					'controller' => 'pages',
+					'action' => 'display',
+					'marketing'
+			],
+			'extra_params' => [
+					'class' => 'nav-link',
+				'target' => '_blank'
+			]
+	],
+    'testimonials' => [
+        'name' => __('Testimonials'),
+        'params' => [
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'testimonials'
+        ],
+        'extra_params' => [
+            'class' => 'nav-link'
+        ]
+    ],
+    /*'blog' => [
+        'name' => __('Blog'),
+        'params' => [
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'testimonials'
+        ],
+        'extra_params' => [
+            'class' => 'nav-link'
+        ]
+    ],*/
+
+    'blog' => [
+        'name' => __('Blog'),
+        'params' => [
+        ],
+        'extra_params' => [
+            'force_url' => 'blog/',
+            'class' => 'nav-link'
+        ]
+    ],
+
+    'open_ticket' => [
+        'name' => __('Contact'),
+        'params' => [
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'open_ticket'
+        ],
+        'extra_params' => [
+            'class' => 'nav-link'
+        ]
+    ],
+
+	'my_account' => [
+			'name' => '<i class="retina-communication-0671"></i>'.__('My account'),
+			'params' => [
+					'plugin' => 'accounts',
+					'controller' => 'accounts',
+					'action' => 'index',
+
+			],
+			'extra_params' => [
+					'class' => 'nav-link my_account',
+				'force_html' => true
+			]
+	],
+
+    /*'kit-digital' => [
+        'name' => __('Kit Digital'),
+        'params' => [
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'kit-digital'
+        ],
+        'extra_params' => [
+            'class' => 'nav-link'
+        ]
+    ],*/
+    /*'account' => [
+        'name' => __('My Account'),
+        'params' => [
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'testimonials'
+        ],
+        'extra_params' => [
+            'class' => 'nav-link nav-link-gray'
+        ]
+    ],*/
+    'cart' => [
+        'name' => '<i class="retina-financee-commerce-1190"><span>'.$cart_count.'</span></i>',
+        'params' => [
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'cart'
+        ],
+        'extra_params' => [
+            'escape' => false,
+            'class' => 'nav-link nav-link-gray',
+            'class-li' => 'cart_button'
+        ]
+    ],
+    /*'language' => [
+        'name' => __('Es'),
+        'params' => [
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'testimonials'
+        ],
+        'extra_params' => [
+            'class' => 'nav-link nav-link-gray'
+        ]
+    ],*/
+];
+
+$sub_items = array(
+    'shop' => array(
+        /*array(
+            'name' => __('Prestashop addons Shop'),
+            'params' => array(
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+                'shop-prestashop'
+            ),
+            'extra_params' => array(
+                'class' => 'button_shop prestashop'
+            ),
+        ),*/
+
+        array(
+            'name' => __('Opencart extensions Shop'),
+            'params' => array(
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+                'extensions-shop-opencart'
+            ),
+            'extra_params' => array(
+                'class' => 'button_shop opencart'
+            ),
+        ),
+        array(
+            'name' => __('Woocommerce plugins Shop'),
+            'params' => array(
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+                'extensions-shop-woocommerce'
+            ),
+            'extra_params' => array(
+                'class' => 'button_shop woocommerce'
+            ),
+        )
+    ),
+    'services' => array(
+        array(
+            'name' => __('Custom modules'),
+            'params' => array(
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+                'services'
+            ),
+            'extra_params' => array(
+                'class' => 'button_services btn-primary module-development'
+            ),
+        ),
+        array(
+            'name' => __('Custom programming'),
+            'params' => array(
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+                'services'
+            ),
+            'extra_params' => array(
+                'class' => 'button_services btn-primary customized-quick-develops'
+            ),
+        ),
+        array(
+            'name' => __('Full project development'),
+            'params' => array(
+                'plugin' => false,
+                'controller' => 'pages',
+                'action' => 'display',
+                'services'
+            ),
+            'extra_params' => array(
+                'class' => 'button_services btn-primary full-projects'
+            ),
+        )
+    ),
+);
+
+foreach ($menu_items as $key => $value) {
+    if ($key == $active_link)
+        $menu_items[$key]['extra_params']['class'] .= ' active';
+}
+
+$footer_links = array(
+    'licenses_terms' => array(
+        'name' => __('Licenses terms, payments and refunds'),
+        'params' => array(
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'payment-and-refunds'
+        ),
+    ),
+    'terms_and_conditions' => array(
+        'name' => __('Terms and Conditions'),
+        'params' => array(
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'terms-and-conditions'
+        ),
+    ),
+    'privacy_policy' => array(
+        'name' => __('Privacy Policy'),
+        'params' => array(
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'privacy-policy'
+        ),
+    ),
+    'data-protection' => array(
+        'name' => __('Data protection'),
+        'params' => array(
+            'plugin' => false,
+            'controller' => 'pages',
+            'action' => 'display',
+            'data-protection'
+        ),
+    ),
+		'black-friday' => array(
+				'name' => __('Black friday'),
+				'params' => array(
+						'plugin' => false,
+						'controller' => 'pages',
+						'action' => 'display',
+						'black-friday'
+				),
+		),
+
+);
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+	<?= !empty($datalayerCode) ? $datalayerCode : '' ?>
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NXVCL2C');</script>
+    <!-- End Google Tag Manager -->
+    <!--Start of Zendesk Chat Script-->
+
+	<?= !empty($richsnippets) ? $richsnippets : '' ?>
+
+    <script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+    $.src="https://v2.zopim.com/?5C70LBjqO0fxOWehuYanQ9mVvOatfM4l";z.t=+new Date;$.
+    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zendesk Chat Script-->
+    <meta charset="UTF-8">
+    <?php /*<meta name="viewport" content= "width=device-width, user-scalable=1">*/ ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php echo $title_for_layout . ' - DevmanExtensions'; ?></title>
+    <meta name="keywords" content="<?= @$meta_keywords?>">
+    <?php if (!empty($meta_description)) { ?>
+        <meta name="description" content="<?= $meta_description ?>"/>
+    <?php } ?>
+    <link rel="canonical" href="<?= "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>">
+    <?php if (!empty($noindex)) { ?>
+        <meta name="robots" content="noindex, nofollow">
+    <?php } ?>
+    <?php echo $this->Html->meta('icon'); ?>
+
+    <?php echo $this->Html->css(
+        array(
+            '/v2/css/bootstrap.min.css',
+            '/libraries/font-awesome-4.7.0/css/font-awesome.css',
+            '/libraries/retinaicon/style.css',
+            '/v2/css/fonts.css',
+            '/v2/css/site.css',
+            '/v2/css/last-css.css',
+            'ajax_loading',
+            'layouts/frontend/animate.css'
+        )
+    );
+    ?>
+
+    <?php echo $this->Html->script(
+        array(
+            '/libraries/jquery/jquery-3.2.1.slim.min',
+            '/v2/js/popper.min.js',
+            '/v2/js/bootstrap.min.js',
+            '/v2/js/gdpr.js',
+            'ajax_loading.js',
+            'validation_rules',
+            'forms_general',
+            'alert_messages',
+			'klaviyo'
+        )
+    );
+    ?>
+
+    <script type="text/javascript">
+        // $('select.selectpicker').selectpicker();
+        // $(document).ready(function () {
+        //     $('table').stacktable({headIndex: false});
+        // });
+    </script>
+
+    <script type="text/javascript">
+        var path = "<?php echo Router::url("/", false); ?>";
+        var plugin = "<?php echo $this->params['plugin'] ?>";
+        var controller = "<?php echo $this->params['controller'] ?>";
+        var action = "<?php echo $this->params['action'] ?>";
+        var url_add_to_cart = '<?= Router::url("/", false) ?>cart/ajax_add_to_cart';
+        var url_remove_from_cart = '<?= Router::url("/", false) ?>cart/ajax_remove_from_cart';
+        var url_update_cart = '<?= Router::url("/", false) ?>cart/ajax_update_cart';
+        var url_apply_discount = '<?= Router::url("/", false) ?>cart/ajax_apply_discount';
+        var url_apply_discount_general = '<?= Router::url("/", false) ?>cart/ajax_apply_discount_general';
+        var url_get_discount = '<?= Router::url("/", false) ?>opencart/get_discount';
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <?php
+        if(!empty($datalayer)) {
+            echo $datalayer;
+        }
+    ?>
+</head>
+<body role="document" class="<?= isset($this->params['pass'][0]) ? $this->params['pass'][0] : ''; ?>">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVCL2C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<nav id="w0" class="navbar navbar-expand-md fixed-top navbar-light bg-white navbar-fr" role="navigation">
+    <div class="container">
+        <a class="navbar-brand" href="<?php echo Router::url("/", false); ?>">
+            <?= $this->Html->image('/v2/images/devman-logo.png', [
+                'alt' => 'Devman',
+                'width' => '114px',
+                'class' => 'devman_logo'
+            ]) ?>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#w0-collapse"
+                aria-controls="w0-collapse" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+        <?php
+           $cart_extraparams =  $menu_items['cart']['extra_params'];
+           $cart_extraparams['class'] .= ' movile-view-cart';
+        ?>
+        <?= $this->Html->link($menu_items['cart']['name'], $menu_items['cart']['params'], $cart_extraparams); ?>
+        <div id="w0-collapse" class="collapse navbar-collapse navbar-c-emphasis">
+            <a href="#w0-collapse" data-toggle="collapse" class="closet-collapsable">x</a>
+            <ul class="nav navbar-nav">
+                <?php foreach ($menu_items as $key => $item) { ?>
+                    <li class="nav-item <?= !empty($item['extra_params']) && array_key_exists('class-li', $item['extra_params']) ? $item['extra_params']['class-li'] : ''?>">
+                        <?= $this->Html->link($item['name'], $item['params'], $item['extra_params']); ?>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<?php $flash_message = $this->Session->flash(); ?>
+
+
+<?= !$is_home && !empty($flash_message) ?  $flash_message  : '' ?>
+<?= $this->fetch('content'); ?>
+<footer>
+    <?php /*
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <h3 class="h6"><?= __('Our star products') ?></h3>
+                <ul class="list-unstyled">
+                    <li><?= $this->Html->link('Opencart - Google Marketing Tools', '/opencart-google-marketing-tools', array('target' => '_blank')) ?></li>
+                    <li><?= $this->Html->link('Opencart - Import/Export PRO', '/opencart-import-export-pro-module', array('target' => '_blank')) ?></li>
+                    <li><?= $this->Html->link('Opencart - Quick n Easy checkout', '/opencart-quick-n-easy-checkout', array('target' => '_blank')) ?></li>
+                    <li><?= $this->Html->link('Opencart - Options Combinations', '/opencart-options-combinations-chained-options', array('target' => '_blank')) ?></li>
+                    <li><?= $this->Html->link('Opencart - Mobile Professional Framework', '/opencart-mobile-pro-framework-extension', array('target' => '_blank')) ?></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <h3 class="h6"><?= __('Services') ?></h3>
+                <ul class="list-unstyled">
+                    <?php foreach ($sub_items['services'] as $key => $item) { ?>
+                        <?php unset($item['extra_params']['class']); ?>
+                        <li><?= $this->Html->link($item['name'], $item['params']); ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <h3 class="h6"><?= __('Our shops') ?></h3>
+                <ul class="list-unstyled">
+                    <?php foreach ($sub_items['shop'] as $key => $item) { ?>
+                        <?php unset($item['extra_params']['class']); ?>
+                        <li><?= $this->Html->link($item['name'], $item['params']); ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <h3 class="h6"><?= __('Customer information') ?></h3>
+                <ul class="list-unstyled">
+                    <?php foreach ($footer_links as $key => $item) { ?>
+                        <?php unset($item['extra_params']['class']); ?>
+                        <li><?= $this->Html->link($item['name'], $item['params']); ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+
+        </div> */ ?>
+
+        <div class="footer_links container">
+            <div class="row">
+            <div class="col-md-12">
+            <?= $this->Html->image('/v2/images/devman-symbol.png', [
+                'alt' => 'Devman',
+                'width' => '50px',
+                'class' => 'mr-1',
+            ]) ?>
+            Copyright &copy; <?= date('Y') ?>&nbsp;&nbsp;-&nbsp;
+            <?php $count = 1;
+            foreach ($footer_links as $key => $item) { ?>
+                <?php $is_last_element = $count == count($footer_links);
+                $count++; ?>
+                <?= $this->Html->link($item['name'], $item['params']); ?><?= !$is_last_element ? '&nbsp;-' : ''; ?>
+            <?php } ?>
+                </div></div>
+        </div>
+
+    </div>
+</footer>
+
+<?php
+    $statistics_acceptted = array_key_exists('gdpr_cookie_statistics', $_COOKIE) && $_COOKIE['gdpr_cookie_statistics'] == 'accepted' ? true : false;
+    $marketing_acceptted = array_key_exists('gdpr_cookie_marketing', $_COOKIE) && $_COOKIE['gdpr_cookie_marketing'] == 'accepted' ? true : false;
+    $some_gdpr_accepted = array_key_exists('gdpr_cookie_statistics', $_COOKIE) || array_key_exists('gdpr_cookie_marketing', $_COOKIE);
+    $statistics_checked = $statistics_acceptted || !$some_gdpr_accepted;
+    $marketing_checked = $marketing_acceptted || !$some_gdpr_accepted;
+?>
+
+<div class="gdpr" <?= $some_gdpr_accepted ? 'style="display:none;"' : '' ?>>
+    <div class="text">This website uses cookies in order to offer you the most relevant information. Please accept cookies for optimal performance.</div>
+    <div class="buttons">
+        <a href="javascript:{}" class="button_gdpr" onclick="gdpr_accept_current_setting();">Accept</a>
+        <a href="javascript:{}" class="button_gdpr" onclick="gdpr_configure();">Configure</a>
+        <?= $this->Html->link('More information', '/cookies', array('target' => '_blank', 'class' => 'more_information')) ?>
+    </div>
+    <div class="configure">
+        <span>Select cookies that you want accept.</span>
+        <div style="clear:both;"></div>
+        <div class="form-check">
+            <div class="checkbox_container">
+                <input type="checkbox" name="statistics" value="statistics" <?= $statistics_checked ? 'checked' : '' ?>>
+                <label class="form-check-label"">Statistics</label>
+            </div>
+            <div class="checkbox_container">
+                <input type="checkbox" name="marketing" value="marketing" <?= $marketing_checked ? 'checked' : '' ?>>
+                <label class="form-check-label">Marketing</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div <?= $some_gdpr_accepted ? '' : 'style="display:none;"' ?> title="Configure cookies" onclick="open_gdpr_configuration();" class="gdpr_button_config bottom_left">
+    <?= $this->Html->image('/v2/images/cookie_button_icon.png', [
+            'alt' => 'Configure cookies',
+            'class' => 'gmt_gdpr_button_icon',
+        ]) ?>
+</div>
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WkiHTE"></script>
+</body>
+</html>

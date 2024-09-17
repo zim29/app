@@ -1,0 +1,1 @@
+!function(e){var a="mmenu";e[a].configuration.classNames.selected="active"}(jQuery)

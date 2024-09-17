@@ -1,0 +1,256 @@
+:root {
+    --main-color: 4, 0, 89;
+    --red-color: 255, 13, 77
+}
+
+* {
+    font-family: 'Work Sans';
+}
+
+i {
+    font-family: 'icomoon';
+}
+
+.main-text {
+    color: rgba(var(--main-color), 1);
+    font-weight: 400;
+}
+
+.btn-danger {
+    background-color: rgba(var(--red-color), 1) !important;
+}
+
+.btn-primary {
+    background-color: rgba(var(--main-color), 1) !important;
+    border-color: rgba(var(--main-color), 1) !important;
+
+}
+
+.btn-shadow {
+    box-shadow: 0 6px 8px rgba(var(--main-color), 0.3);
+}
+
+::placeholder {
+    color: rgb(var(--main-color)) !important;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #888888;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #888888;
+}
+
+
+.header {
+    background-image: url('../img/header_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .middle {
+    position: relative;
+    top: 6rem;
+}
+
+input, select, textarea, .file-input-label {
+    border-radius: 10px !important;
+    border-color: white !important;
+    box-shadow: 0 0px 8px rgba(var(--main-color), 0.3);
+    color: rgb(var(--main-color)) !important;
+}
+
+@media (min-width: 800px) {
+
+    .header {
+        position: relative;
+        margin-top: 6rem;
+        height: 15rem !important;
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 950px !important;
+    }
+
+    .cards-container {
+        position: relative;
+        bottom: -3.4rem !important;
+
+    }
+}
+
+@media (max-width: 800px) {
+
+    .cards-container {
+        position: relative;
+        bottom: -4rem !important;
+
+    }
+}
+
+.btn-danger {
+    background: var(--main-color);
+}
+
+.btn {
+    border-radius: 14px;
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 12px;
+}
+
+.custom-gradient {
+    background: linear-gradient(100deg, #3e1a66 0%, #29006a 25%, #29006a 75%, #3e1a66 100%);
+    border-radius: 20px;
+    width: 17rem !important;
+    height: 6 !important;
+    /* Opcional: para redondear los bordes como en la imagen */
+}
+
+i {
+    font-style: normal;
+}
+
+.product {
+
+    font-size: 7rem;
+}
+
+.active-users {
+    border-top: 3px;
+    border-bottom: 3px;
+    border-radius: 2px;
+    border-right: 0;
+    border-left: 0;
+    border-style: solid;
+    border-color: rgb(var(--red-color));
+}
+
+.top-extentions * {
+    color: rgb(var(--main-color));
+}
+
+.active-users h3 {
+    font-size: 24px;
+}
+
+.text-white:before {
+    color: white !important;
+}
+.ticket_success {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ticket_success img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rem; /* Ajusta el tamaño si es necesario */
+    height: 20rem;
+    display: block !important;
+}
+.ticket_success * {
+    display: block;
+    text-align: center;
+}
+
+.file-input-container {
+    position: relative;
+    width: 100%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-input-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(var(--main-color));
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    width: 100%;
+}
+
+.file-input-label .icon-clip {
+    margin-right: 8px;
+}
+
+textarea {
+    resize: none;
+}
+
+#file-list {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border: 0px;
+    border-radius: 20px;
+    width: 100% !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .top{
+    position: relative;
+    top: -3.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78%;
+}
+
+.testimonial-card img{
+    height: 2.4rem;
+}
+
+.testimonial-card .logo {
+    width: 10rem;
+    height: 5rem !important;
+    background-color: white;
+    border: 0px;
+    border-radius: 20px;
+}
+.testimonial-rating {
+    font-size: 12px;
+}
+
+.text-danger {
+    color: rgb(var(--red-color)) !important; /* Color rojo para enlaces */
+}
+
+.shadow-sm {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease-in-out;
+}
+
+.page.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.page.outgoing {
+    opacity: 0;
+    transform: translateX(-100%);
+}

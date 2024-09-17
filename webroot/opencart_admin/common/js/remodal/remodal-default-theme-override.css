@@ -1,0 +1,39 @@
+.remodal-confirm,
+.remodal-cancel {
+  padding: 12px 25px;
+}
+
+.remodal-confirm i,
+.remodal-cancel i {
+  margin-right: 8px;
+}
+
+.remodal .remodal_content {
+    text-align: left;
+}
+.remodal .remodal_content h1,
+.remodal .remodal_content h2,
+.remodal .remodal_content h3,
+.remodal .remodal_content h4 {
+    text-align: center;
+}
+
+.remodal .alert {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+div.remodal > h2 {
+    font-size: 12px;
+    font-style: italic;
+    color: #9d9d9d;
+}
+
+div.remodal > h1 {
+    margin-bottom: 10px;
+}
+
+div.remodal > h1 + div.alert {
+    margin-bottom: 20px;
+}

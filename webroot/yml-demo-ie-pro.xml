@@ -1,0 +1,55 @@
+<yml_catalog>
+	<shop>
+		<name>David</name>
+		<company>Excellent Vendor</company>
+		<url>https://mivendor.org</url>
+		<categories>
+			<category id="1">Cars</category>
+			<category id="2" parentId="1">Combustion cars</category>
+			<category id="3" parentId="1">Electric cars</category>
+			<category id="4">Motorbikes</category>
+		</categories>
+
+		<offers>
+			<name>Catalog vendor 1</name>
+			<url>https://mivendor.org</url>
+
+			<offer id="1" available="true">
+				<model>3</model>
+				<name><![CDATA[Tesla model 3]]></name>
+				<vendor><![CDATA[Tesla]]></vendor>
+
+				<prices>
+					<price>35000</price>
+					<discount>60000</discount>
+					<discount_unit>2</discount_unit>
+				</prices>
+
+				<categoryId>1</categoryId>
+				<categoryId>3</categoryId>
+			
+				<pictures>https://devmanextensions.com/images/tesla01.jpg;https://devmanextensions.com/images/tesla02.jpg;https://devmanextensions.com/images/tesla03.jpg</pictures>
+			
+				<params>
+					<param name="Autonomy" unit="km">500</param>
+					<param name="Power" unit="kW">147</param>
+				</params>
+				
+				<keyword name="Car" />
+				<keyword name="Electric" />
+				<keyword name="Super Chargers"/>
+			</offer>
+		</offers>
+	</shop>
+</yml_catalog>
+
+
+
+
+
+
+
+
+
+
+

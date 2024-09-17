@@ -1,0 +1,107 @@
+/* Navbar Base Styles */
+#navbar {
+    background-color: rgba(255, 255, 250, .4);
+    padding: 20px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.navbar-content {
+    opacity: 1;
+    z-index: 1;
+}
+
+#navbar.navbar-shrink {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Brand */
+.ci-vertical-logo {
+    width: 8rem;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link,
+.nav-link.cart svg path {
+    color: #040059;
+    stroke: #040059;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover,
+.nav-link.cart:hover svg path, .active>a {
+    color: rgb(var(--red-color)) !important;
+    stroke: rgb(var(--red-color));
+    font-weight: bold !important;
+}
+
+
+/* Navbar Container */
+.navbar-nav {
+    gap: 2rem;
+}
+
+.collapse {
+    flex-grow: 0 !important;
+}
+
+/* Cart Icon */
+.cart svg {
+    width: 1.4rem;
+}
+
+/* Navigation Text (Mobile) */
+.nav-text {
+    display: none;
+}
+
+.nav-link {
+    font-size: .9rem;
+}
+
+/* Display text when the navbar is expanded on small screens */
+.navbar-collapse.show .nav-text {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* Responsive Styles */
+
+/* Styles for PC (Desktops and laptops) */
+@media screen and (min-width: 1024px) {
+    .navbar-brand {
+        display: flex;
+        font-size: 1.7rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 2.4rem;
+    }
+
+    .navbar-nav {
+        margin-left: 15rem;
+    }
+
+    .ci-vertical-logo {
+        width: 9rem;
+    }
+}
+
+/* Styles for phones (Small devices, typically up to 767px width) */
+@media screen and (max-width: 767px) {
+    #navbar {
+        background-color: rgba(248, 249, 250, 1);
+    }
+
+    #navbar ul {
+        height: 100vh;
+    }
+
+    .navbar-brand {
+        display: flex;
+        margin-right: 4rem;
+        margin-bottom: 1rem;
+    }
+}
+

@@ -1,0 +1,1 @@
+aéÑf<?php exit; ?>a:1:{s:7:"content";s:88:"["app\/webroot\/blog\/wp-content\/themes\/astra\/assets\/js\/minified\/frontend.min.js"]";}

@@ -1,0 +1,36 @@
+<article>
+    <header class="jumbotron">
+        <h1><?= __('Privacy Policy') ?></h1>
+    </header>
+
+    <div class="container">
+        <p>In compliance with the provisions of article 10 of Law 34/2002, of July 11, on Services of the Information Society and Electronic Commerce (hereinafter, LSSI-CE), the following aspects regarding the service provider:</p>
+
+        <p>Owner: David Nieves Coronado (Devman Extensions)</p>
+        <p>Contact email: <a href="mailto:info@devmanextensions.com">info@devmanextensions.com</a></p>
+        <p>For the purposes of the Organic Law 15/1999, of December 13, on Personal Data Protection, we inform you that your data will be included in a personal data file that is owned by David Nieves Coronado ( Devman Extensions), who has taken appropriate security measures. This file is duly registered in the Spanish Agency for Data Protection.</p>
+
+        <p>By providing your data through the contact form enabled for this purpose, you expressly accept the inclusion of the same in the referred file to process the order made, as well as to expedite and facilitate purchases on the portal and allow access to the history of purchases from the user. Likewise, in the cases in which it so requests, completing and sending the electronic registration form <a href="https://devmanextensions.com/">https://devmanextensions.com/</a>, expressly consents to the sending of information about special discounts and promotions carried out by the portal, without prejudice to his right to revoke consent to this treatment now granted, when he deems it appropriate. Therefore, you expressly accept and authorize the use of electronic mail as a valid procedure for the submission of communications related to the use of this portal.</p>
+
+        <p>Users of <a href="https://devmanextensions.com/">https://devmanextensions.com/</a> must be registered to purchase the products offered on this portal. To do this, you must complete an initial electronic form and accept the privacy policy. When registering, you will be asked for the necessary data to process the purchase of the selected products. During the data collection process, and in each place of the portal where such data is requested, the User will be informed, whether or not it is mandatory to collect such data, and their refusal to supply them will imply that they can not register on the portal and therefore not be able to make purchases in the same.</p>
+
+        <p>David Nieves Coronado (Devman Extensions) is committed to protecting our customers' personal information by utilizing the industry standard encryption protocol known as Secure Socket Layer (SSL) to keep your order information secure. All orders are transmitted in a coded format. To make sure your application is secure, simply check it on your Internet browser while you are in the ordering section. Most browsers use some kind of symbol to alert you about the fact that you are on a secure website. We keep your shipping and billing information when creating an account with us, but that information will not be used by anyone other than David Nieves Coronado (Devman Extensions) and third parties providing services related to <a href="https://devmanextensions.com/">https://devmanextensions.com/</a></p>
+
+        <p>The <a href="https://devmanextensions.com/">https://devmanextensions.com/</a> portal uses a system of automatic recognition based on "Cookies", which will allow you to directly access your data, streamlining the purchase process. "Cookies" are small information files that are stored by your browser on your computer's hard drive. Most web browsers automatically accept cookies, but you can change your browser settings to prevent such acceptance.</p>
+
+        <p>The User has access at any time to his private profile, being able to modify, edit or delete the information provided, as well as manage his withdrawal directly, or by request addressed to <a href="mailto:info@devmanextensions.com">info@devmanextensions.com</a> or by writing addressed to the portal holder together with a copy of his DNI the equivalent document.</p>
+
+        <p>In order to be able to fulfill the aforementioned purposes, it may be necessary to communicate your data to other companies that provide services (parcel delivery agencies, financial entities for payment formalization, web hosting services, etc.) , so you are informed that, by providing us with information through the authorized registration forms, you expressly authorize to make such communication.</p>
+
+        <p>From these circumstances, the user is duly advised that, at any time, he may exercise his rights of access, rectification, cancellation or opposition, as indicated below.</p>
+
+        <p>El Usuario garantiza que los datos personales facilitados a través del formulario son veraces, quedando obligado a comunicar cualquier modificación de los mismos. Igualmente, el Usuario garantiza que toda la información facilitada corresponde con su situación real, que está puesta al día y es exacta. Además el Usuario se obliga a mantener en todo momento sus datos actualizados, siendo el único responsable de la inexactitud o falsedad de los datos facilitados y de los perjuicios que pueda causar por ello David Nieves Coronado (Devman Extensions), como titular del portal <a href="https://devmanextensions.com/">https://devmanextensions.com/</a>., o a terceros con motivo de la utilización de dichos datos.
+        </p>
+
+        <p>Se le informa que podrá ejercitar, respecto de los datos recabados, los derechos reconocidos en la Ley Orgánica 15/1999, de Acceso, Rectificación, Cancelación de datos y Oposición. Por ello se le informa que podrá ejercer dichos derechos mediante solicitud escrita y firmada que podrá enviar, junto con fotocopia de su DNI o documento identificativo equivalente, por correo postal a la siguiente dirección David Nieves Coronado (Devman Extensions), por correo electrónico a la dirección info@devmanextensions.</p>
+
+        <p>The User guarantees that the personal data provided through the form is truthful, being obliged to communicate any modification of the same. Likewise, the User guarantees that all the information provided corresponds to its actual situation, which is current and accurate. In addition, the User is obliged to maintain at all times his / her updated data, being solely responsible for the inaccuracy or falsity of the data provided and of the damages that can cause for that David Nieves Coronado (Devman Extensions), like proprietor of the www portal. devmanextensions.com., or to third parties for the use of such data.</p>
+
+        <p>You are informed that you can exercise, with respect to the data collected, the rights recognized in Organic Law 15/1999, Access, Rectification, Cancellation of Data and Opposition. For this reason, you are informed that you can exercise these rights by means of a written and signed request that you can send, along with a photocopy of your DNI or equivalent identification document, by mail to David Nieves Coronado (Devman Extensions), by e-mail to address <a href="mailto:info@devmanextensions.com">info@devmanextensions.com</a>.</p>
+    </div>
+</article>

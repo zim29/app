@@ -1,0 +1,91 @@
+/* #tab-feeds {
+    display: flex;
+    flex-direction: column;
+}
+ */
+.or {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 56px;
+}
+div.filters_configuration a > i.fa{
+    margin: 0px;
+}
+div.filters_configuration table tbody tr.filter_model{
+    display: none;
+}
+ul.dropdown-menu li a span.badge,
+button.dropdown-toggle span.badge{
+    width: 100%;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+span.badge.badge_google_merchant {
+    background: #518EEE;
+}
+span.badge.badge_google_adwords {
+    background: #0FA361;
+}
+span.badge.badge_google_reviews {
+    background: #EEA703;
+}
+span.badge.badge_facebook {
+    background: #3B5998;
+}
+span.badge.badge_twenga {
+    background: #874236;
+}
+span.badge.badge_criteo {
+    background: #EA6A21;
+}
+
+span.cmin,
+span.chou,
+span.cmon,
+span.cmont,
+span.cwee,
+span.cpat,
+span.curl{
+    font-weight: bold;
+}
+span.cmin {
+    color: #008914;
+}
+span.chou {
+    color: #3e3d32;
+}
+span.cmon {
+    color: #ff8e71;
+}
+span.cmont {
+    color: #6495ff;
+}
+span.cwee {
+    color: #ff0006;
+}
+span.cpat {
+    color: #e530fd;
+}
+span.curl {
+    color: #fdab00;
+}
+
+a.feed_create_link {
+    background: #00b774;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    box-shadow: none;
+    font-size: 14px;
+    height: 40px;
+    padding: 0px 15px;
+    line-height: 40px;
+    margin-top: 15px;
+}
+a.feed_create_link:hover {
+    background: #03af70;
+}

@@ -1,0 +1,173 @@
+a.profile_create_link {
+    display: block;
+    clear: both;
+}
+.or {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 56px;
+}
+.or.new {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 95px;
+}
+div.profile_import.configuration.products.columns_configuration > label {
+    display: none;
+}
+div.profile_import.configuration.products.columns_configuration > div {
+    width:  100%;
+}
+
+div.filters_configuration a > i.fa,
+div.columns_fixed_configuration a > i.fa{
+    margin: 0px;
+}
+div.filters_configuration table tbody tr.filter_model,
+div.columns_fixed_configuration table tbody tr.custom_column_fixed_model{
+    display: none;
+}
+
+div.columns_configuration table .form-group {
+    margin: 0px !important;
+    padding: 3px 0px !important;
+}
+div.columns_configuration table td.extra_configuration {
+    padding: 0px;
+}
+div.columns_configuration table td.extra_configuration label.checkbox_label {
+    padding-top: 0px;
+}
+div.profile_import_products_data_related_legend {
+    margin-top: 15px;
+    clear: both;
+}
+td.extra_configuration a i {
+    margin-right: 0px !important;
+    margin-left: 5px;
+}
+a[data-remodal-target="mapping_xml_columns"] {
+    color: #f00;
+    font-weight: bold;
+    margin-top: 4px;
+}
+div.container_create_profile div.form-group-columns label {
+    margin-bottom: 10px !important;
+}
+div.container_create_profile>div.row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+div.container_create_profile span.main_title {
+    margin-left: 10px;
+}
+div.container_create_profile div.container_select_profile {
+    padding-right: 0px !important;
+}
+div.container_create_profile div.container_select_profile .bootstrap-select.form-control:not([class*=col-]) {
+    width: 64%;
+}
+div.container_create_profile div.container_select_profile a.delete_profile {
+    margin-left: 10px;
+}
+div.container_create_profile div.container_create_profile_steps {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+div.container_create_profile div.container_create_profile_steps legend {
+    background: none;
+    border: 1px solid #eee;
+    text-shadow: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+    height: 55px;
+    line-height: 53px;
+    border-radius: 0px;
+    margin: 0px;
+    background: #fafafa;
+}
+div.container_create_profile div.container_create_profile_steps legend:before{
+    content: "\e9ed";
+    font-family: 'retinafont';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-right: 7px;
+    font-size: 25px;
+    margin-top: 17px;
+}
+div.container_create_profile div.container_create_profile_steps legend.opened {
+    background: #0db7ef;
+    color: #fff;
+}
+div.container_create_profile div.container_create_profile_steps legend.opened:before{
+    content: "\e9ee";
+}
+div.container_create_profile div.container_create_profile_steps legend:hover {
+    cursor: pointer;
+}
+div.container_create_profile div.container_create_profile_steps>div.form-group,
+div.container_create_profile div.container_create_profile_steps>div.container_step>div.form-group {
+    margin-left: 5px;
+    margin-right: -15px;
+    padding-right: 15px;
+    border: none;
+}
+
+div.container_create_profile div.container_create_profile_steps>div.form-group-columns,
+div.container_create_profile div.container_create_profile_steps>div.container_step>div.form-group-columns {
+    border-bottom: none;
+}
+div.container_create_profile div.container_create_profile_steps>div.form-group.type_legend>div.col-md-12,
+div.container_create_profile div.container_create_profile_steps>div.container_step>div.form-group.type_legend>div.col-md-12 {
+    padding: 0px;
+}
+div.container_create_profile div.container_create_profile_steps>div.form-group.type_legend,
+div.container_create_profile div.container_create_profile_steps>div.container_step>div.form-group.type_legend {
+    border-left: none;
+    border-right: none;
+    padding: 0px;
+}
+div.container_create_profile div.container_create_profile_steps>div.form-group.type_legend {
+    padding-right: 10px;
+}
+div.container_create_profile div.container_create_profile_steps div.container_step {
+    display: none;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-left: 5px;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+div.container_create_profile div.container_create_profile_steps div.container_step div.columns_configuration,
+div.container_create_profile div.container_create_profile_steps div.container_step div.filters_configuration,
+div.container_create_profile div.container_create_profile_steps div.container_step div.columns_fixed_configuration {
+    margin-top: 15px;
+}
+
+div.columns_configuration,
+div.filters_configuration,
+div.columns_fixed_configuration,
+div.categories_mapping_configuration {
+    min-height: 104px;
+    width: 100%;
+}
+div.container_create_profile div.profile_import_products_data_related_legend {
+    margin-top: 0px;
+}
+
+div.filters_configuration div.expression_view {
+    margin-bottom: 15px;
+}
